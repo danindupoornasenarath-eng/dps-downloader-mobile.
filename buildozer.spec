@@ -20,7 +20,8 @@ version = 5.2
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3, kivy==2.3.0, https://github.com/kivymd/KivyMD/archive/master.zip, requests, yt-dlp, plyer, urllib3, chardet, idna, certifi, jinja2, pyjnius
+# Added pillow for KivyMD image compile support
+requirements = python3, kivy==2.3.0, kivymd==1.2.0, pillow, requests, yt-dlp, plyer, urllib3, chardet, idna, certifi, jinja2
 
 # (str) Supported orientations (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait
@@ -42,7 +43,8 @@ android.minapi = 28
 # android.sdk_path =
 
 # (str) Android NDK version to use
-android.ndk = 26b
+# Commented out so Buildozer automatically chooses the compatible version
+# android.ndk = 26b
 
 # (bool) Use --private data directory (True) or public (False)
 android.private_storage = True
@@ -63,4 +65,4 @@ p4a.bootstrap = sdl2
 log_level = 2
 
 # (int) Display warning if buildozer is run as root (0 = False, 1 = True)
-warn_on_root = 1
+warn_on_root = 1                  
